@@ -16,7 +16,7 @@ function buatLink(){
 
             let urlNama = encodeURIComponent(nama);
 
-            let link = "https://linniel.github.io/herinitawedding.github.io/?to=" + urlNama;
+            let link = "https://linniel.github.io/obyestiwedding.github.io/?to=" + urlNama;
 
             let pesan =
 `Assalamu’alaikum Warahmatullahi Wabarakatuh
