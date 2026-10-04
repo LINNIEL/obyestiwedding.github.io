@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+
+    overflow: hidden;
+}
+
+/* =================================
+   AREA APLIKASI
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center; /* tengah vertikal */
+  align-items: center;     /* tengah horizontal */
+
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  max-height: 100vh;
+
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 1;
+}
+/* =================================
+   BACKGROUND
+================================= */
+
+.background {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("cover.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Background tidak ikut scroll */
+    z-index: 0;
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+
+/* Scrollbar */
+
+.container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #C8A96A;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* =================================
+   TITLE
+================================= */
+
+h3 {
+    text-align: center;
+    font-family: "Tangerine", cursive;
+    font-size: 48px;
+    color: #050505;
+}
+
+/* =================================
+   TEXTAREA
+================================= */
+
+textarea {
+    width: 100%;
+    height: 150px;
+
+    margin-bottom: 15px;
+    padding: 10px;
+
+    background-color: #1b170e7e;
+
+    color: white;
+
+    border: 1px solid #C8A96A;
+    border-radius: 5px;
+
+    resize: vertical;
+}
+
+textarea::placeholder {
+    color: #ddd;
+}
+
+/* =================================
+   GENERATE BUTTON
+================================= */
+
+button.generate {
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 20px;
+
+    background: #000000;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+/* =================================
+   NAMA TAMU
+================================= */
+
+.nama-label {
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+    color: #fcfbf7;
+}
+
+/* =================================
+   MESSAGE
+================================= */
+
+.message-box {
+    background: #05050533;
+
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    white-space: pre-line;
+}
+
+/* =================================
+   COPY BUTTON
+================================= */
+
+.copy-btn {
+
+    background: #28a745;
+    color: white;
+
+    border: none;
+
+
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}

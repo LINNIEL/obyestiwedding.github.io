@@ -1,0 +1,24 @@
+#linniel_6{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+}
+.saksi{
+    white-space: nowrap;
+    font-family: "Estonia", cursive;
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
+.kel_mem{
+    white-space: nowrap;
+    font-family: "Sniglet", system-ui;
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}

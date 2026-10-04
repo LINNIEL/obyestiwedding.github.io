@@ -1,0 +1,452 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* Nama mempelai / heading utama */
+    --font-gold: #D8B878;
+
+    /* Teks utama */
+    --font-ivory: #F1EDE3;
+
+    /* Label / teks sekunder */
+    --font-muted: #fffffe;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   INVITATION WRAPPER
+   MOBILE FRAME
+========================================= */
+
+.invitation-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   BACKGROUND SLIDESHOW
+========================================= */
+
+.background-wrapper {
+    position: fixed;
+
+    top: 0;
+    left: 50%;
+
+    width: 100%;
+    max-width: 400px;
+
+    height: 100vh;
+
+    transform: translateX(-50%);
+
+    overflow: hidden;
+
+    background: #111;
+
+    z-index: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+.background-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   BACKGROUND LAYERS
+========================================= */
+
+.background-layer {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0;
+
+    transform: scale(1.03);
+
+    filter: blur(0);
+
+    transition:
+        opacity 1.8s ease,
+        filter 1.8s ease,
+        transform 7s ease;
+}
+
+.background-layer.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.background-layer.blur {
+    filter: blur(8px);
+}
+
+
+/* =========================================
+   BACKGROUND OVERLAY
+========================================= */
+
+.background-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.60)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   COVER
+========================================= */
+
+.cover {
+    position: fixed;
+
+    top: 0;
+    left: 50%;
+
+    width: 100%;
+    max-width: 400px;
+
+    height: 100vh;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    z-index: 100;
+
+    background: #111;
+
+    padding: 70px 30px 45px;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+
+/* =========================================
+   COVER HIDE
+========================================= */
+
+.cover.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   COVER BACKGROUND
+========================================= */
+
+.cover-background {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("../bg/cover.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: -2;
+}
+
+
+/* =========================================
+   COVER OVERLAY
+========================================= */
+
+.cover-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.65)
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================
+   COVER TOP
+========================================= */
+
+.cover-top {
+    position: relative;
+
+    width: 100%;
+
+    z-index: 2;
+}
+
+.cover-label {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+    color: var(--font-muted);
+}
+
+.cover-title {
+    font-size: 58px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+    color: var(--font-muted);
+    font-family: "Beau Rivage", cursive;
+    font-style: normal;
+    filter: drop-shadow(2px 4px 4px white);
+}
+
+.cover-date {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+    color: var(--font-muted);
+}
+.txt{
+    font-family: "Estonia", cursive;
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 4px rgb(248, 248, 247));
+}
+.txt_2{
+    font-family: "Estonia", cursive;
+    font-size: 62px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 4px rgb(0, 0, 0));
+}
+
+/* =========================================
+   COVER BOTTOM
+========================================= */
+
+.cover-bottom {
+    position: relative;
+
+    width: 100%;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    color: var(--font-muted);
+}
+
+
+/* =========================================
+   GUEST
+========================================= */
+
+.guest-wrapper {
+    margin-bottom: 25px;
+}
+
+.guest-label {
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.guest-name {
+    font-size: 24px;
+    font-weight: 400;
+    white-space: nowrap;
+    font-family: "Beau Rivage", cursive;
+}
+
+
+/* =========================================
+   OPEN BUTTON
+========================================= */
+
+.open-invitation {
+    border: 2px solid rgb(255, 196, 0);
+    background: var(--font-muted);
+    color: #000000;
+    padding: 10px 38px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.open-invitation:hover {
+    background: rgba(255, 255, 255, 0.18);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TAMBAHAN COVER
+========================================= */
+
+.sry {
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   INVITATION CONTENT
+========================================= */
+
+.invitation {
+    position: relative;
+
+    width: 100%;
+    max-width: 400px;
+
+    margin: 0 auto;
+
+    z-index: 1;
+}
+
+
+
+
+
+/* =========================================
+   GENERAL SECTION
+========================================= */
+
+.section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 30px;
+}
+
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 401px) {
+
+    body {
+        background: #111;
+    }
+
+
+    .invitation-wrapper {
+        width: 400px;
+        max-width: 400px;
+    }
+
+
+    .background-wrapper {
+        width: 400px;
+        max-width: 400px;
+    }
+
+
+    .cover {
+        width: 400px;
+        max-width: 400px;
+    }
+
+
+    .invitation {
+        width: 400px;
+        max-width: 400px;
+    }
+
+}

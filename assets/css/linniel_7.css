@@ -1,0 +1,29 @@
+#linniel_7{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: rgba(0, 0, 0, 0);
+    overflow:hidden;
+
+}
+#linniel_7{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+.bahagia{
+
+    filter:
+        drop-shadow(4px  4px 4px #f7f5f5);
+    width: 320px;
+
+}
